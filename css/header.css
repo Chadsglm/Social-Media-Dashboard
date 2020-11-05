@@ -1,0 +1,151 @@
+header {
+  padding: 2.5em 1.6em 5.2em 1.6em;
+  display: flex;
+  flex-direction: column;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  transition: all 0.5s ease;
+  background: #f5f7ff;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  header {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+}
+
+@media (min-width: 1440px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2.5em 10em 10em 10em;
+  }
+}
+
+header.dark-top-bg {
+  background: #1f212e;
+}
+
+header.dark-top-bg h2 {
+  color: white;
+}
+
+header.dark-top-bg h5 {
+  color: #8b97c6;
+}
+
+header.dark-top-bg .theme {
+  transition: border-top 0.5s ease;
+  border-top: 1px solid #343f6a;
+}
+
+@media (min-width: 1440px) {
+  header.dark-top-bg .theme {
+    border-top: unset;
+    padding-top: unset;
+    align-content: center;
+    grid-column-gap: initial;
+  }
+}
+
+header .title {
+  margin-left: 5px;
+  margin-bottom: 1.2em;
+  line-height: 28px;
+}
+
+@media (min-width: 1440px) {
+  header .title {
+    margin-bottom: unset;
+    line-height: 24px;
+  }
+}
+
+header h2 {
+  font-weight: 700;
+  color: #1e202a;
+}
+
+header h5 {
+  color: #63687e;
+}
+
+header .theme {
+  transition: border-top 0.5s ease;
+  padding-top: 1.2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 50%;
+  justify-items: start;
+  border-top: 1px solid #aeb3cb;
+}
+
+@media (min-width: 1440px) {
+  header .theme {
+    border-top: unset;
+    padding-top: unset;
+    align-content: center;
+    grid-column-gap: initial;
+  }
+}
+
+header .theme label {
+  justify-self: end;
+}
+
+header .theme input[type="checkbox"] {
+  display: none;
+  visibility: hidden;
+}
+
+header .theme input[type="checkbox"]:checked ~ .check:before {
+  transform: translateX(-20px);
+}
+
+header .theme input[type="checkbox"]:checked ~ .check {
+  background: linear-gradient(to right, #378fe6, #3eda82);
+}
+
+header .theme input[type="checkbox"]:checked ~ .check:after {
+  transform: translateX(0px);
+  background: #1f212e;
+}
+
+header .theme .check:before,
+header .theme .check:after {
+  content: '';
+  border-radius: 50%;
+  height: 16px;
+  position: absolute;
+  top: 2px;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  width: 16px;
+}
+
+header .theme .check:before {
+  right: 2px;
+}
+
+header .theme .check {
+  display: block;
+  position: relative;
+  background-color: #aeb3cb;
+  border-radius: 20px;
+  height: 20px;
+  width: 40px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+header .theme .check:hover {
+  background: linear-gradient(to right, #378fe6, #3eda82);
+}
+
+header .theme .check:after {
+  left: 2px;
+  background: white;
+  transform: translateX(20px);
+}

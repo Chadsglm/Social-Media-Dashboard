@@ -1,0 +1,212 @@
+section.account-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  section.account-stats {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    position: relative;
+    top: -48px;
+  }
+}
+
+@media (min-width: 1440px) {
+  section.account-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    grid-column-gap: initial;
+    padding-left: 9em;
+    padding-right: 9em;
+  }
+}
+
+section.account-stats .card-fb {
+  border-top: 4px solid #198ff5;
+  position: relative;
+  top: -46px;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  section.account-stats .card-fb {
+    position: initial;
+    top: unset;
+  }
+}
+
+@media (min-width: 1440px) {
+  section.account-stats .card-fb {
+    top: -112px;
+  }
+}
+
+section.account-stats .card-tw {
+  border-top: 4px solid #1ca0f2;
+  margin-top: -1.6em;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  section.account-stats .card-tw {
+    margin-top: unset;
+  }
+}
+
+@media (min-width: 1440px) {
+  section.account-stats .card-tw {
+    margin-top: -16em;
+  }
+}
+
+section.account-stats .card-ig {
+  position: relative;
+  margin-top: 1.6em;
+}
+
+section.account-stats .card-ig:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(to right, #fdc468, #df4996);
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  section.account-stats .card-ig {
+    margin-top: unset;
+  }
+}
+
+@media (min-width: 1440px) {
+  section.account-stats .card-ig {
+    margin-top: -16em;
+  }
+}
+
+section.account-stats .card-yt {
+  border-top: 4px solid #c4032a;
+  margin-top: 1.6em;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  section.account-stats .card-yt {
+    margin-top: unset;
+  }
+}
+
+@media (min-width: 1440px) {
+  section.account-stats .card-yt {
+    margin-top: -16em;
+  }
+}
+
+section.account-stats .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 5px;
+  width: 86%;
+  height: 220px;
+  transition: all 0.5s ease;
+  background: #f0f2fa;
+}
+
+section.account-stats .card:hover {
+  background: #e1e5f4;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  section.account-stats .card {
+    width: 20em;
+    margin-bottom: 1.6em;
+  }
+}
+
+section.account-stats .card.dark-card-bg {
+  background: #252a41;
+}
+
+section.account-stats .card.dark-card-bg:hover {
+  background: #333b5b;
+}
+
+section.account-stats .social-account i {
+  font-size: 26px;
+}
+
+section.account-stats .card.dark-card-bg .social-account h5 {
+  color: #8b97c6;
+}
+
+section.account-stats .card.dark-card-bg .counter .count {
+  color: white;
+}
+
+section.account-stats .card.dark-card-bg .counter .followers {
+  color: #8b97c6;
+}
+
+section.account-stats .card .social-account {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 0.6em;
+}
+
+section.account-stats .card .social-account img {
+  margin-top: 2px;
+  width: 24px;
+}
+
+section.account-stats .card .social-account h5 {
+  color: #63687e;
+  align-self: center;
+}
+
+section.account-stats .card .counter .count {
+  font-size: 4em;
+  color: #1e202a;
+}
+
+section.account-stats .card .counter .followers {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #63687e;
+}
+
+section.account-stats .card .stats {
+  display: grid;
+    grid-template-columns: auto auto;
+  grid-gap: 0.38em;
+}
+
+section.account-stats .card .stats span:first-child {
+  display: grid;
+  align-self: center;
+}
+
+section.account-stats .card .stats.stats-up {
+  color: #1db489;
+}
+
+section.account-stats .card .stats.stats-down {
+  color: #dc414c;
+}
+
+section.account-stats .card .stats.stats-up i{
+  margin-top: 5px;
+}
+
+section.account-stats .card .stats.stats-down i{
+  margin-top: 2px;
+}
